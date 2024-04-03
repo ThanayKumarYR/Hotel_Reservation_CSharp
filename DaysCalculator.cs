@@ -15,7 +15,7 @@ namespace HotelReservation
             CultureInfo provider = CultureInfo.InvariantCulture;
             Console.WriteLine("Reservation Dates");
             Console.Write("Enter the strating date in ddMmmyyyy format = ");
-            DateTime start = DateTime.ParseExact(Console.ReadLine(), format,provider);
+            DateTime start = DateTime.ParseExact(Console.ReadLine(), format, provider);
             Console.Write("Enter the ending date in ddMmmyyyy format = ");
             DateTime end = DateTime.ParseExact(Console.ReadLine(), format, provider);
             if (start <= end)
@@ -24,8 +24,6 @@ namespace HotelReservation
                 return days.Days + 1;
             }
             else { return -1; }
-                
-
         }
     }
 }
