@@ -11,19 +11,20 @@ namespace HotelReservation
         public string HotelName { get; set; }
         public int WeekDayRegular { get; set; }    
         public int WeekEndRegular { get; set; }
-        
         public int TotalPrice { get; set; }
-        public Hotel(string name, int weekDayRate,int weekEndRate) 
+        public int Rating { get; set; }
+        public Hotel(string name, int weekDayRate,int weekEndRate,int rating) 
         {
             HotelName = name;
             WeekDayRegular = weekDayRate;
             WeekEndRegular = weekEndRate;
+            Rating = rating;
             DisplayHotel();
         }
 
         public void DisplayHotel()
         {
-            Console.WriteLine($"Hotel '{HotelName}' with regular customer rate for Week Day is ${WeekDayRegular} and Week End is ${WeekEndRegular}.");
+            Console.WriteLine($"Hotel '{HotelName}' with regular customer rate for Week Day is ${WeekDayRegular}, Week End is ${WeekEndRegular} and Rating {Rating}.");
         }
 
         public static void CheapestRegular(Hotel[] hotels,int days)
@@ -54,9 +55,7 @@ namespace HotelReservation
             {
                 Console.WriteLine($"{hotel.HotelName}, Total Price = ${hotel.TotalPrice}");
             }
-            
         }
-
     }
 }
  
