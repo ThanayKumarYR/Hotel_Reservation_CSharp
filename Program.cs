@@ -27,12 +27,26 @@ namespace HotelReservation
             {
                 case 1:
                     Console.WriteLine("Finding the Cheapest hotel !");
-                    
-
                     var (CheapweekDays, CheapWeekEnds) = daysCalculator.Count();
                     if (CheapweekDays != -1 && CheapWeekEnds != -1)
                     {
-                        Hotel.CheapestRegular(hotels, CheapweekDays, CheapWeekEnds);
+                        Console.WriteLine("1.Regular Customer 2.Reward Customer");
+                        int choosing = int.Parse(Console.ReadLine());
+                        switch (choosing)
+                        {
+                            case 1:
+                                Console.WriteLine("Finding the Cheapest hotel for Regular Customer");
+                                Hotel.CheapestRegular(hotels, CheapweekDays, CheapWeekEnds);
+                                break;
+                            case 2:
+                                Console.WriteLine("Finding the Cheapest hotel for Reward Customer");
+                                Hotel.CheapestRewards(hotels, CheapweekDays, CheapWeekEnds);
+                                break;
+                            default:
+                                Console.WriteLine("Invalid Inputs !");
+                                break;
+                        }
+                        
                     }
                     else
                     {
