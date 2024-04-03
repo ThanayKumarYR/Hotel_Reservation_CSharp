@@ -15,15 +15,15 @@ namespace HotelReservation
             Hotel[] hotels = new Hotel[3];
 
             hotels[0] = new Hotel("Lakewood",110,90);
-            hotels[1] = new Hotel("Bridgewood", 160,50);
+            hotels[1] = new Hotel("Bridgewood", 150,50);
             hotels[2] = new Hotel("Ridgewood", 220,150);
 
             DaysCalculator daysCalculator = new DaysCalculator();
 
-            int weekDays = daysCalculator.Count();
+            var (weekDays,WeekEnds) = daysCalculator.Count();
             if (weekDays != -1)
             {
-                Hotel.CheapestRegular(hotels,weekDays);
+                Hotel.CheapestRegular(hotels,weekDays,WeekEnds);
             }
             else 
             {
