@@ -36,6 +36,14 @@ namespace HotelReservation
            BestHotel.TotalPrice = (weekDays * BestHotel.WeekDayRegular) + (weekEnds * BestHotel.WeekEndRegular);
            Console.WriteLine($"{BestHotel.HotelName}, Total Price = ${BestHotel.TotalPrice}");
         }
+
+        public static void BestRewards(Hotel[] hotels, int weekDays, int weekEnds)
+        {
+            int BestRating = hotels.Max((hotel) => hotel.Rating);
+            Hotel BestHotel = hotels.Single((hotel) => hotel.Rating == BestRating);
+            BestHotel.TotalPrice = (weekDays * BestHotel.WeekDayRewards) + (weekEnds * BestHotel.WeekEndRewards);
+            Console.WriteLine($"{BestHotel.HotelName}, Total Price = ${BestHotel.TotalPrice}");
+        }
         public static void CheapestRegular(Hotel[] hotels, int weekDays, int weekEnds)
         {
             int TotalPrice = int.MaxValue;

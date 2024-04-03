@@ -46,7 +46,6 @@ namespace HotelReservation
                                 Console.WriteLine("Invalid Inputs !");
                                 break;
                         }
-                        
                     }
                     else
                     {
@@ -58,7 +57,22 @@ namespace HotelReservation
                     var (BestweekDays, BestWeekEnds) = daysCalculator.Count();
                     if (BestweekDays != -1 && BestWeekEnds != -1)
                     {
-                        Hotel.BestRegular(hotels, BestweekDays, BestWeekEnds);
+                        Console.WriteLine("1.Regular Customer 2.Reward Customer");
+                        int choosing = int.Parse(Console.ReadLine());
+                        switch (choosing)
+                        {
+                            case 1:
+                                Console.WriteLine("Finding the Best hotel for Regular Customer");
+                                Hotel.BestRegular(hotels, BestweekDays, BestWeekEnds);
+                                break;
+                            case 2:
+                                Console.WriteLine("Finding the Best hotel for Reward Customer");
+                                Hotel.BestRewards(hotels, BestweekDays, BestWeekEnds);
+                                break;
+                            default:
+                                Console.WriteLine("Invalid Inputs !");
+                                break;
+                        }
                     }
                     else
                     {
