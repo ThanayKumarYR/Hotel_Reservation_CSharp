@@ -50,12 +50,22 @@ namespace HotelReservation
             IEnumerable<Hotel> hotelSelected = from hotel in hotels
                                          where hotel.TotalPrice <= TotalPrice
                                          select hotel;
+
+            int BestRating = hotelSelected.Max((hotel) => hotel.Rating);
+
+            hotelSelected = from hotel in hotels
+                            where hotel.Rating == BestRating
+                            select hotel;
+
+
             Console.WriteLine($"Cheapest Hotels are,");
             foreach (var hotel in hotelSelected)
             {
-                Console.WriteLine($"{hotel.HotelName}, Total Price = ${hotel.TotalPrice}");
+                Console.WriteLine($"{hotel.HotelName},Rating {hotel.Rating} Total Price = ${hotel.TotalPrice}");
             }
+           
         }
+
     }
 }
  
