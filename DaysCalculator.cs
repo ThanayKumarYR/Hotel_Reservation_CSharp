@@ -25,7 +25,7 @@ namespace HotelReservation
                 DateTime start = DateTime.ParseExact(strStart, format, provider);
                 Console.Write("Enter the ending date in ddMmmyyyy format = ");
                 string strEnd = Console.ReadLine();
-                if (!validation.Check(strStart)) throw new ApplicationException("End date is not in correct format !");
+                if (!validation.Check(strEnd)) throw new ApplicationException("End date is not in correct format !");
                 DateTime end = DateTime.ParseExact(strEnd, format, provider);
                 if (start > end)
                 {
