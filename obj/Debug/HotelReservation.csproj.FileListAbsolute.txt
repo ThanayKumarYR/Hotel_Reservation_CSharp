@@ -1,0 +1,2 @@
+C:\Users\Thanay\source\repos\HotelReservation\obj\Debug\HotelReservation.csproj.AssemblyReference.cache
+C:\Users\Thanay\source\repos\HotelReservation\obj\Debug\HotelReservation.csproj.CoreCompileInputs.cache
