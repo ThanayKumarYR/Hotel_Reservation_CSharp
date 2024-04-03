@@ -9,22 +9,26 @@ namespace HotelReservation
     class Hotel
     {
         public string HotelName { get; set; }
-        public int WeekDayRegular { get; set; }    
+        public int WeekDayRegular { get; set; }
         public int WeekEndRegular { get; set; }
         public int TotalPrice { get; set; }
         public int Rating { get; set; }
-        public Hotel(string name, int weekDayRate,int weekEndRate,int rating) 
+        public int WeekDayRewards {get;set;}
+        public int WeekEndRewards {get;set;}
+        public Hotel(string name, int weekDayRegular,int weekEndRegular,int rating,int weekDayRewards,int weekEndRewards) 
         {
             HotelName = name;
-            WeekDayRegular = weekDayRate;
-            WeekEndRegular = weekEndRate;
+            WeekDayRegular = weekDayRegular;
+            WeekEndRegular = weekEndRegular;
             Rating = rating;
+            WeekDayRewards = weekDayRewards;
+            WeekEndRewards = weekEndRewards;
             DisplayHotel();
         }
 
         public void DisplayHotel()
         {
-            Console.WriteLine($"Hotel '{HotelName}' with regular customer rate for Week Day is ${WeekDayRegular}, Week End is ${WeekEndRegular} and Rating {Rating}.");
+            Console.WriteLine($"Hotel '{HotelName}' with regular customer rate for Week Day is ${WeekDayRegular}, Week End is ${WeekEndRegular} and Rating {Rating}.\nThe customer rewards for Week Day is ${WeekDayRewards}, Week End is ${WeekEndRewards}.\n");
         }
 
         public static void BestRegular(Hotel[] hotels,int weekDays,int weekEnds)

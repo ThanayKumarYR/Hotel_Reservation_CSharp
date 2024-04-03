@@ -15,9 +15,9 @@ namespace HotelReservation
             Hotel[] hotels = new Hotel[3];
             DaysCalculator daysCalculator = new DaysCalculator();
 
-            hotels[0] = new Hotel("Lakewood",110,90,3);
-            hotels[1] = new Hotel("Bridgewood", 150,50,4);
-            hotels[2] = new Hotel("Ridgewood", 220,150,5);
+            hotels[0] = new Hotel("Lakewood",110,90,3,80,80);
+            hotels[1] = new Hotel("Bridgewood", 150,50,4,110,50);
+            hotels[2] = new Hotel("Ridgewood", 220,150,5,100,40);
 
             Console.WriteLine("\n1.Cheapest Hotels 2.BestRated Hotels 3.Exit");
             Console.Write("Enter the choice = ");
