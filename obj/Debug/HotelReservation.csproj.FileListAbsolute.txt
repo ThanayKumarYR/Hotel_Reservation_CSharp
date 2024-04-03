@@ -1,2 +1,9 @@
 C:\Users\Thanay\source\repos\HotelReservation\obj\Debug\HotelReservation.csproj.AssemblyReference.cache
 C:\Users\Thanay\source\repos\HotelReservation\obj\Debug\HotelReservation.csproj.CoreCompileInputs.cache
+C:\Users\Thanay\source\repos\HotelReservation\bin\Debug\HotelReservation.exe.config
+C:\Users\Thanay\source\repos\HotelReservation\bin\Debug\HotelReservation.exe
+C:\Users\Thanay\source\repos\HotelReservation\bin\Debug\HotelReservation.pdb
+C:\Users\Thanay\source\repos\HotelReservation\obj\Debug\HotelReservation.csproj.AssemblyReference.cache
+C:\Users\Thanay\source\repos\HotelReservation\obj\Debug\HotelReservation.csproj.CoreCompileInputs.cache
+C:\Users\Thanay\source\repos\HotelReservation\obj\Debug\HotelReservation.exe
+C:\Users\Thanay\source\repos\HotelReservation\obj\Debug\HotelReservation.pdb
