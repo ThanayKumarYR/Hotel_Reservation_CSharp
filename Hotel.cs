@@ -32,8 +32,12 @@ namespace HotelReservation
         public static void BestRegular(Hotel[] hotels,int weekDays,int weekEnds)
         { 
            int BestRating = hotels.Max((hotel) => hotel.Rating);
-           Hotel BestHotel = hotels.Single((hotel) => hotel.Rating == BestRating);
-           BestHotel.TotalPrice = (weekDays * BestHotel.WeekDayRegular) + (weekEnds * BestHotel.WeekEndRegular);
+           //Hotel BestHotel = hotels.Single((hotel) => hotel.Rating == BestRating);
+           IEnumerable<Hotel> BestHotelEnumerable = from hotel in hotels
+                             where hotel.Rating == BestRating
+                             select hotel;
+            Hotel BestHotel = BestHotelEnumerable.FirstOrDefault();
+            BestHotel.TotalPrice = (weekDays * BestHotel.WeekDayRegular) + (weekEnds * BestHotel.WeekEndRegular);
            Console.WriteLine($"{BestHotel.HotelName}, Total Price = ${BestHotel.TotalPrice}");
         }
 
